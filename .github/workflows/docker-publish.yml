@@ -7,6 +7,11 @@ on:
   push:
     paths:
       - latex/**
+  pull_request_target:
+    types:
+      - opened
+    branches:
+      - 'pre-prod/**'
 
 env:
   REGISTRY: ghcr.io
