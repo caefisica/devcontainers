@@ -63,9 +63,10 @@ RUN apt update -y && \
     rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 # Update the TexLive package manager and minimal packages
-RUN tlmgr update --self --verbose
-RUN tlmgr install latexmk latexindent --verbose
-RUN tlmgr update --all --verbose
+RUN tlmgr info
+RUN tlmgr update --self
+RUN tlmgr install latexmk latexindent
+RUN tlmgr update --all
 RUN texhash
 
 COPY --from=chktex-builder /tmp/chktex-builder/chktex /usr/local/bin/chktex
