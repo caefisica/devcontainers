@@ -24,9 +24,9 @@ ARG TARGETOS
 ARG TARGETARCH
 
 LABEL org.opencontainers.image.authors "David Duran <contacto@altmails.com>"
-LABEL org.opencontainers.image.url "https://github.com/caefisica/LaTeX/"
-LABEL org.opencontainers.image.documentation "https://github.com/caefisica/LaTeX/blob/master/README.md"
-LABEL org.opencontainers.image.source "https://github.com/caefisica/LaTeX/tree/master/.devcontainer"
+LABEL org.opencontainers.image.url "https://github.com/caefisica/devcontainers/"
+LABEL org.opencontainers.image.documentation "https://github.com/caefisica/devcontainers/blob/master/latex/README.md"
+LABEL org.opencontainers.image.source "https://github.com/caefisica/devcontainers/tree/master/latex"
 
 ARG SCHEME="scheme-basic"
 ARG DOCFILES=0
