@@ -1,4 +1,4 @@
-name: Publicar imagen Docker (LaTeX)
+name: 📦 LaTeX Containers
 
 on:
   schedule:
@@ -12,10 +12,12 @@ on:
       - opened
     branches:
       - 'pre-prod/**'
+    paths:
+      - latex/**
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: latex
 
 jobs:
   build:
