@@ -25,10 +25,10 @@ ARG TARGETPLATFORM
 ARG TARGETOS
 ARG TARGETARCH
 
-LABEL org.opencontainers.image.authors="David Duran <contacto@altmails.com>" \
-    org.opencontainers.image.url="https://github.com/caefisica/LaTeX/" \
-    org.opencontainers.image.documentation="https://github.com/caefisica/LaTeX/blob/master/README.md" \
-    org.opencontainers.image.source="https://github.com/caefisica/LaTeX/tree/master/.devcontainer"
+LABEL org.opencontainers.image.authors "David Duran <contacto@altmails.com>"
+LABEL org.opencontainers.image.url "https://github.com/caefisica/devcontainers/"
+LABEL org.opencontainers.image.documentation "https://github.com/caefisica/devcontainers/blob/master/latex/README.md"
+LABEL org.opencontainers.image.source "https://github.com/caefisica/devcontainers/tree/master/latex"
 
 ARG SCHEME="scheme-full"
 ARG DOCFILES=0
@@ -45,7 +45,7 @@ ENV TEXUSERDIR="/texlive-user"
 ENV PATH ${TEXDIR}/bin/aarch64-linux:${TEXDIR}/bin/x86_64-linux:${PATH}
 
 RUN apt update -y && \
-    apt install -y --no-install-recommends fontconfig vim neovim python3-pygments ttf-mscorefonts-installer ghostscript locales texlive-lang-spanish && \
+    apt install -y --no-install-recommends fontconfig vim neovim python3-pygments ttf-mscorefonts-installer ghostscript locales && \
     locale-gen ${LANG} && \
     update-locale LANG=${LANG} && \
     apt clean autoclean && \
@@ -86,7 +86,6 @@ RUN apt update -y && \
     rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 RUN tlmgr update --self --all && \
-    tlmgr install latexmk latexindent babel-spanish && \
     tlmgr update --all && \
     texhash
 
