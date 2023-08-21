@@ -10,10 +10,13 @@
             "settings": {
                 "files.eol": "\n",
                 "editor.formatOnSave": true,
+                "editor.fontSize": 20,
+                "editor.lineHeight": 33,
                 "git.autofetch": true,
                 "files.associations": {
                     "*.docker": "dockerfile"
-                }
+                },
+                "workbench.sideBar.location": "right"
             }
         }
     },
