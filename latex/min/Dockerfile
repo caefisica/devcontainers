@@ -23,10 +23,12 @@ ARG TARGETPLATFORM
 ARG TARGETOS
 ARG TARGETARCH
 
+LABEL org.opencontainers.image.title "LaTeX-min"
 LABEL org.opencontainers.image.authors "David Duran <contacto@altmails.com>"
 LABEL org.opencontainers.image.url "https://github.com/caefisica/devcontainers/"
 LABEL org.opencontainers.image.documentation "https://github.com/caefisica/devcontainers/blob/master/latex/README.md"
 LABEL org.opencontainers.image.source "https://github.com/caefisica/devcontainers/tree/master/latex"
+LABEL org.opencontainers.image.description "Un entorno mínimo de desarrollo de LaTeX. Ideal para usuarios avanzados que deseen una configuración liviana y rápida. Perfecto si ya sabes cómo agregar paquetes según lo necesites."
 
 ARG SCHEME="scheme-basic"
 ARG DOCFILES=0

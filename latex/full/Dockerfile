@@ -25,10 +25,12 @@ ARG TARGETPLATFORM
 ARG TARGETOS
 ARG TARGETARCH
 
+LABEL org.opencontainers.image.title "LaTeX-full"
 LABEL org.opencontainers.image.authors "David Duran <contacto@altmails.com>"
 LABEL org.opencontainers.image.url "https://github.com/caefisica/devcontainers/"
 LABEL org.opencontainers.image.documentation "https://github.com/caefisica/devcontainers/blob/master/latex/README.md"
 LABEL org.opencontainers.image.source "https://github.com/caefisica/devcontainers/tree/master/latex"
+LABEL org.opencontainers.image.description "Un entorno completo de desarrollo de LaTeX. Perfecto para utilizar plantillas sin tener que instalar paquetes adicionales."
 
 ARG SCHEME="scheme-full"
 ARG DOCFILES=0
