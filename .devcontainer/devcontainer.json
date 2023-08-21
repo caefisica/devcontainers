@@ -4,9 +4,12 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "vivaxy.vscode-conventional-commits",
-                "GitHub.copilot"
-            ],
+				"vivaxy.vscode-conventional-commits",
+				"GitHub.copilot",
+				"GitHub.vscode-github-actions",
+				"ms-azuretools.vscode-docker",
+				"DavidAnson.vscode-markdownlint"
+			],
             "settings": {
                 "files.eol": "\n",
                 "editor.formatOnSave": true,
