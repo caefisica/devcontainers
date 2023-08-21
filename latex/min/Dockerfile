@@ -43,7 +43,7 @@ ENV PATH ${TEXDIR}/bin/aarch64-linux:${TEXDIR}/bin/x86_64-linux:${PATH}
 
 RUN apt update -y && \
     apt install -y --no-install-recommends \
-        fontconfig vim neovim python3-pygments ttf-mscorefonts-installer texlive-lang-spanish ghostscript locales && \
+    fontconfig vim neovim python3-pygments ttf-mscorefonts-installer texlive-lang-spanish ghostscript locales && \
     locale-gen ${LANG} && \
     update-locale LANG=${LANG} && \
     rm -rf /var/lib/apt/lists/*
@@ -64,7 +64,7 @@ RUN wget -qO- "${TEXLIVE_MIRROR}/install-tl-unx.tar.gz" | tar xz --strip-compone
     export TEXLIVE_INSTALL_NO_CONTEXT_CACHE=1 && \
     export TEXLIVE_INSTALL_NO_WELCOME=1 && \
     ./install-tl -profile /tmp/texlive/profile.txt \
-        -no-interaction -texdir ${TEXDIR} -texuserdir ${TEXUSERDIR} && \
+    -no-interaction -texdir ${TEXDIR} -texuserdir ${TEXUSERDIR} && \
     rm -rf /tmp/texlive ${TEXDIR}/*.log
 
 RUN apt update -y && \
