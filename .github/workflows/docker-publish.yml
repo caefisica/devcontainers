@@ -17,7 +17,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: latex
+  IMAGE_NAME: caefisica/devcontainers/latex
 
 jobs:
   build:
@@ -62,6 +62,8 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-${{ matrix.tag_suffix }}
+          flavor: |
+            latest=auto
 
       - name: Construir y publicar imagen Docker
         id: build-and-push
